@@ -1,6 +1,10 @@
 "use strict";
-window.APP = window.APP || {};
-APP.NoteRouter = Backbone.Router.extend({
+
+
+window.APP = window.APP || {
+};
+//APP.NoteRouter = Backbone.Router.extend({
+APP.NoteRouter = Parse.Router.extend({
   routes: {
     "note/new": "create",
     "notes/index": "index",

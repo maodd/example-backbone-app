@@ -1,6 +1,7 @@
 
 "use strict";
-APP.NoteIndexView = Backbone.View.extend({
+//APP.NoteIndexView = Backbone.View.extend({
+APP.NoteIndexView = Parse.View.extend({
   // the constructor
   initialize: function (options) {
     // model is passed through

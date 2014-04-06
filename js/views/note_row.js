@@ -1,5 +1,6 @@
 "use strict";
-APP.NoteRowView = Backbone.View.extend({
+//APP.NoteRowView = Backbone.View.extend({
+APP.NoteRowView = Parse.View.extend({
   // the wrapper defaults to div, so only need to set this if you want something else
   // like in this case we are in a table so a tr
   tagName: "tr",
@@ -26,7 +27,7 @@ APP.NoteRowView = Backbone.View.extend({
     event.preventDefault();
     event.stopPropagation();
     // we would call
-    // this.model.destroy();
+     this.note.destroy();
     // which would make a DELETE call to the server with the id of the item
     this.notes.remove(this.note);
     this.$el.remove();

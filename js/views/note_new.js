@@ -1,6 +1,7 @@
 
 "use strict";
-APP.NoteNewView = Backbone.View.extend({
+//APP.NoteNewView = Backbone.View.extend({
+APP.NoteNewView = Parse.View.extend({
   // functions to fire on events
   events: {
     "click button.save": "save"
@@ -32,14 +33,20 @@ APP.NoteNewView = Backbone.View.extend({
       author: this.$el.find('input[name=author]').val(),
       description: this.$el.find('textarea[name=description]').val(),
       // just setting random number for id would set as primary key from server
-      id: Math.floor(Math.random() * 100) + 1
+      //id: Math.floor(Math.random() * 100) + 1
     });
     if (this.note.isValid()){
       // add it to the collection
       this.notes.add(this.note);
-      // this.note.save();
-      // redirect back to the index
+      this.note.save({
+		'title':this.note.get('title')
+	  }).then(function(object) {
+  //alert("yay! it worked");
+  
+  // redirect back to the index
       window.location.hash = "notes/index";
+});;
+      
     }
   },
 

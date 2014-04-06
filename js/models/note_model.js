@@ -1,6 +1,11 @@
 
 "use strict";
-APP.NoteModel = Backbone.Model.extend({
+
+
+//APP.NoteModel = Backbone.Model.extend({
+APP.NoteModel = Parse.Object.extend({
+  className: "Note",
+  
   // you can set any defaults you would like here
   defaults: {
     title: "",
@@ -20,7 +25,7 @@ APP.NoteModel = Backbone.Model.extend({
   }
 });
 
-APP.NoteCollection = Backbone.Collection.extend({
+APP.NoteCollection = Parse.Collection.extend({
   // Reference to this collection's model.
   model: APP.NoteModel
 });

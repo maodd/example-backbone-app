@@ -1,6 +1,7 @@
 
 "use strict";
-APP.NoteEditView = Backbone.View.extend({
+//APP.NoteEditView = Backbone.View.extend({
+APP.NoteEditView = Parse.View.extend({
   // functions to fire on events
   events: {
     "click button.save": "save"
