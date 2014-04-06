@@ -1,9 +1,8 @@
-#Example Backbone.js App
+#Example Parse.com Backbone.js App
 
 ##try it out here...
-<http://dperrymorrow.github.com/example-backbone-app/>
+<http://s3-us-west-2.amazonaws.com/parse-js-demo/index.html/>
 
-As simple as possible backbone.js app to demonstrate how to wire one up. Does not even have a serverside, just persists full crud clientside with the server calls commented out.
-It lets you create, read, update, delete notes, all with hashtag urls via a Backbone.js router.
+As simple as possible Parse.com backbone.js app to demonstrate how to wire one up. 
 
 ![Screen Shot](https://raw.github.com/dperrymorrow/example-backbone-app/master/img/screen-shot.jpg)
